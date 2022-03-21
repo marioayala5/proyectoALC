@@ -9,5 +9,4 @@ public class Ejemplo {
         calc = new Calculadora();
         calc.sumar();
     }
-
 }
