@@ -61,5 +61,4 @@ public class Persona {
         this.sexo = sexo;
     }
     
-    
 }
