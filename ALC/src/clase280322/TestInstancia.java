@@ -4,24 +4,24 @@ import java.util.Date;
 
 public class TestInstancia {
 
-    private Persona persona;
+    private Clientes cliente;
 
     public TestInstancia() {
-        persona = new Persona();
+        cliente = new Clientes();
 
-        persona.setId(001);
-        persona.setNroDoc(5047874);
-        persona.setNombre("Mario");
-        persona.setApellido("Ayala");
-        persona.setFecNac(new Date("1994/06/20"));
-        persona.setSexo(Persona.SEXO.M);
+        cliente.setId(001);
+        cliente.setNroDoc(5047874);
+        cliente.setNombre("Hernan");
+        cliente.setApellido("Allende");
+        cliente.setFecNac(new Date("1993/01/27"));
+        cliente.setSexo(Persona.SEXO.I);
 
-        System.out.println("ID: " + persona.getId());
-        System.out.println("Nombre: " + persona.getNombre());
-        System.out.println("Apellido: " + persona.getApellido());
-        System.out.println("CI: " + persona.getNroDoc());
-        System.out.println("SEXO: " + persona.getSexo());
-        System.out.println("FECHA NACIMIENTO: " + persona.getFecNac());
+        System.out.println("ID: " + cliente.getId());
+        System.out.println("Nombre: " + cliente.getNombre());
+        System.out.println("Apellido: " + cliente.getApellido());
+        System.out.println("CI: " + cliente.getNroDoc());
+        System.out.println("SEXO: " + cliente.getSexo());
+        System.out.println("FECHA NACIMIENTO: " + cliente.getFecNac());
 
     }
 
