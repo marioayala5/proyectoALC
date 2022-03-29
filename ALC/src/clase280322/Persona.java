@@ -3,14 +3,21 @@ package clase280322;
 import java.util.Date;
 
 public class Persona {
+    enum SEXO {M,F,I}
     private Integer id;
     private Integer nroDoc;
     private String nombre;
     private String apellido;
     private Date fecNac;
-    private String sexo;
+    private SEXO sexo;
 
     public Persona() {
+    }
+
+    public Persona(Integer nroDoc, String nombre, String apellido) {
+        this.nroDoc = nroDoc;
+        this.nombre = nombre;
+        this.apellido = apellido;
     }
 
     public Integer getId() {
@@ -53,12 +60,13 @@ public class Persona {
         this.fecNac = fecNac;
     }
 
-    public String getSexo() {
+    public SEXO getSexo() {
         return sexo;
     }
 
-    public void setSexo(String sexo) {
+    public void setSexo(SEXO sexo) {
         this.sexo = sexo;
     }
+
     
 }
