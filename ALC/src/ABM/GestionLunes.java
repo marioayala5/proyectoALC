@@ -2,6 +2,7 @@ package ABM;
 
 import Conexion.ConexionBD;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -11,6 +12,7 @@ public class GestionLunes {
     private final Conexion.ConexionBD conexion; //me indica el paquete 
     private PreparedStatement ps;
     private String query, mensaje;
+    private ResultSet rs;
 
     public GestionLunes() {
         conexion = new ConexionBD();

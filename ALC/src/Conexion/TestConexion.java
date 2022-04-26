@@ -11,17 +11,14 @@ public class TestConexion {
 
     public TestConexion() {
         registro = new Lunes();
-        registro.setDescripcion("Lunes 18/04/2022");
-        registro.setComentario("Test de Inserción");
+        registro.setDescripcion("Lunes 18/04/2022 MODIFICADO");
+        registro.setComentario("Test de Inserción/MODIFICACION");
+        registro.setId(3);
         
         gestionLunes = new GestionLunes();
-        gestionLunes.agregarRegistro(registro);
-        System.out.println(gestionLunes.getMensaje());
-               
+        gestionLunes.modificarRegistro(registro);
+        System.out.println(gestionLunes.getMensaje());          
     }
-
-
-    
     public static void main(String[] args) {
         new TestConexion();
     }
