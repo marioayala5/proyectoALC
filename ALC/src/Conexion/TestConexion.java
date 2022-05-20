@@ -13,7 +13,7 @@ public class TestConexion {
         registro = new Lunes();
         registro.setDescripcion("Lunes 18/04/2022 MODIFICADO");
         registro.setComentario("Test de Inserción/MODIFICACION");
-        registro.setId(3);
+        registro.setId(2);
         
         gestionLunes = new GestionLunes();
         gestionLunes.modificarRegistro(registro);
