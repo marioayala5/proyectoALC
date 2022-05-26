@@ -3,7 +3,7 @@ package Conexion;
 
 
 public enum TipoMotorBD {
-    POSTGRESQL ("postgresql", "org.postgresql.Driver","laboratorio_alc","postgres","123456789","5432","localhost"),
+    POSTGRESQL ("postgresql", "org.postgresql.Driver","alc","postgres","123456789","5432","localhost"),
     MYSQL ("mysql","com.mysql.jdbc.Driver","laboratorio_sc","root","1","3306","localhost");
     
 
