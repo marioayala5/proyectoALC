@@ -16,7 +16,7 @@ public class GestionRuc {
     public GestionRuc() {
         this.conexion = new ConexionBD();
     }
-
+    
     public boolean agregar(List<Ruc> lista) {
         int bloqueAgru = 100;
         int cont = 1;
