@@ -4,6 +4,8 @@ import Conexion.ConexionBD;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -120,5 +122,36 @@ public class GestionLunes {
 
     public String getMensaje() {
         return mensaje;
+    }
+    
+    public List<Lunes> recuperarRegistros(){
+        try {
+            List<Lunes> lista=new ArrayList<>();
+            Lunes registro;
+            query="SELECT id,descripcion,comentario FROM public.lunes;";
+            ps = conexion.obtenerConexion().prepareStatement(query);
+            rs=ps.executeQuery();
+            while (rs.next()) {    
+                registro = new Lunes();
+                registro.setId(rs.getInt("id"));
+                registro.setDescripcion(rs.getString("descripcion"));
+                registro.setComentario(rs.getString("comentario"));
+                lista.add(registro);
+            }
+            return lista;
+        } catch (SQLException ex) {
+            Logger.getLogger(GestionLunes.class.getName()).log(Level.SEVERE, null, ex);
+            return null;
+        }
+          finally{
+            try {
+                conexion.cerrarConexion();
+                ps.close();
+                rs.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(GestionLunes.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        
     }
 }

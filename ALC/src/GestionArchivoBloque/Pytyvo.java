@@ -1,6 +1,7 @@
 package GestionArchivoBloque;
 
 public class Pytyvo {
+    private Integer id;
     private Integer cic;
     private String nombreApellido;
     private String departamento;
@@ -8,6 +9,14 @@ public class Pytyvo {
 
     public Integer getCic() {
         return cic;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public void setCic(Integer cic) {
